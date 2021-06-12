@@ -1,0 +1,57 @@
+$myColor: red;
+
+h2 {
+  color: $myColor;
+}
+
+#loading {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width:300px;
+    height: 300px;
+}
+#map{
+    width:700px;
+}
+#listresults{
+    max-height: 170px;
+    overflow-y: scroll;
+}
+
+#header {
+    height: 100px;
+}
+.item1 { grid-area: header1; }
+.item2 { grid-area: map; }
+.item3 { grid-area: list; }
+.item4 { grid-area: details; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header1 header1 header1 header1'
+      'map map list list'
+      'map map details details'
+      'map map details details';
+    grid-gap: 40px;
+    padding: 10px;
+  }
+
+  .pulsate {
+    animation: pulsate 3s ease-out;
+    animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+@keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
+  
