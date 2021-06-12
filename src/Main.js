@@ -19,7 +19,9 @@ var k = false;
 
 function Main() {
 
-    const APIKEY = 'c0GI1dStxGctf0AA9Rd1MAh7IUswe0KK';
+    const config = require('./config.json')
+
+    const APIKEY = config.APIKEY;
     const [loading,setLoading] = useState(true);
     const [Events,setEvents] = useState([]);
     const [EventInfo,setEventInfo] = useState("Please select an event");
